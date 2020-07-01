@@ -224,17 +224,17 @@ class Books extends Component {
     }
     let btn;
     if (localStorage.getItem('role') === "2") {
-      btn = <>
+      btn =
         <div className="btn-group-vertical">
         <ul className="list-group" >
         <li >
         <Link to={"/book/borrow/user"}>
-          <button style={{  "margin": "0% 0% 10% 50%","width": "175%"}} type="button" className="btn btn-outline-secondary" >My Borrow List</button>
+          <button style={{  "margin": "0% 0% 10% 0%","width": "175%"}} type="button" className="btn btn-outline-secondary" >My Borrow List</button>
         </Link>
         </li>
+        
         </ul>
         </div>
-      </>
     }
     else {
       btn =

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 // import { deleteGenre } from '../utils/http'
 // import ModalAlert from '../components/ModalAlert'
@@ -21,109 +21,30 @@ function GenreCard({ data, refresh, props, deleteGenreAction, isLoading, isFulfi
   // console.log(data)
   async function delGenre(e) {
     // const id = data.id
+    try {
 
+    } catch (error) {
+
+    }
     e.preventDefault()
     await deleteGenreAction(data.id)
     setSuccess(true)
 
-    // setIsShow(true)
-
- 
-
- 
-    if(errorDelete===true){
+    if (errorDelete === true) {
       console.log("success")
       console.log(errorDelete)
       setIsShow(true)
       //  alert("delete failed")
-       setSuccess(false)
-      return refresh() 
+      setSuccess(false)
+      return refresh()
     }
-  
-  if (isFulfilled === true) {
-    console.log("success")
-    console.log(isSuccess)
-    return refresh()
-}
-   
-    // if (isFulfilled === true) {
-    //   console.log("success")
-    //   console.log(isSuccess)
-    //   return refresh()
-    // }
-    // if (isRejected === true) {
-    //   alert('delete failed')
-    //   console.log()
-    // }
 
-    // if (errorDelete) {
+    if (isFulfilled === true) {
+      console.log("success")
+      console.log(isSuccess)
+      return refresh()
+    }
 
-
-    //   setIsShow(true)
-    //   //  alert("delete failed")
-    //   setSuccess(false)
-    //   console.log(isSuccess)
-    // }
-
-
-
-    // await deleteGenre(
-
-    //    localStorage.getItem('token'),
-    //        id
-    //       )
-    //        .then((response) => {
-    //         setSuccess(true)
-    //          setIsShow(true)
-    //            console.log(response)
-
-    //        setText("berhasil")
-    //         console.log(isSuccess)
-
-    //         return refresh() 
-    //        })
-    //        .catch((error) => {
-
-    //          console.log(error.response)
-    //         if (error.response) {
-
-    //             if (error.response.data.data.message == "TokenExpiredError") {
-    //               props.history.push('/auth/token')
-    //               alert(error.response.data.data.message)
-    //               props.history.push('/auth/login')
-    //               console.log(error.response.data.data.message)
-    //             }
-
-    //             else if(error.response.status===500){
-    //               setSuccess(false)
-    //               setIsShow(true)
-
-
-    //               //  alert(error.response.data.data.message)
-    //               // alert("Cant delete, data still have relation with Book")
-
-
-    //           }
-
-    //           else {
-    //             console.log(error.response.data.data.message)
-    //             localStorage.removeItem('token')
-    //             localStorage.removeItem('refreshToken')
-    //             localStorage.removeItem('email')
-    //             localStorage.removeItem('id')
-    //             localStorage.removeItem('id_user')
-    //             localStorage.removeItem('role')
-    //             this.props.history.push('/auth/logout')
-    //           }
-
-    //           }
-    //           else{
-
-    //               console.log(error)
-    //               alert("delete failed")
-    //               alert("logout, renew error, please relog")
-    //           }
-    //     })
 
 
   }
@@ -133,16 +54,13 @@ function GenreCard({ data, refresh, props, deleteGenreAction, isLoading, isFulfi
 
     <>
 
-      {/* {isLoading === true ?
-        <><div style={{ margin: "10% 30% 30% 50%" }} className="spinner-border" role="status"><span className="sr-only">Loading...</span>
-        </div> </> : <></>} */}
       <tr >
         <td>{data.id}</td>
         <td>{data.name}</td>
         <td>
           <Link to={"/data/genre/edit/" + data.id}>
             <form >
-              <button type="button" value={data.id}><i className="fa fa-pencil" style={{"fontSize":"24px"}}></i></button>
+              <button type="button" value={data.id}><i className="fa fa-pencil" style={{ "fontSize": "24px" }}></i></button>
             </form>
           </Link>
 

@@ -192,8 +192,8 @@ class Register extends Component {
 
 				<div className="row">
 				<div className="col-sm" style={{ width: "100%" }}>
-							<img src="/library.jpeg" style={{ width: "100%", height: "100%" }} alt="library.jpeg"/>
-							<h1 className="top-left" style={{ color: "white" }}>Library App<br></br>
+							<img src="/astro5.jpg" style={{ width: "100%", height: "100%" }} alt="library.jpeg"/>
+							<h1 className="top-left" style={{ color: "white" }}>Astro Library<br></br>
 					Make Your History From Now</h1>
 							<br />
 						</div>
@@ -265,7 +265,12 @@ class Register extends Component {
 							{this.state.isEmptyEmail===true?
 		<ModalAlert text="Email Empty"/>:<></>
 		}			
-
+	<div style={{ margin: "0% 0 5% 38%" }}>
+							<span style={{ margin: "0% 0 0% 0%" }}>Already Have Account ?  </span>
+							<Link to="/auth/login">
+								<span className="" >Login Here</span>
+							</Link>
+						</div>
 					</div>
 						<Footer />
 					</div>

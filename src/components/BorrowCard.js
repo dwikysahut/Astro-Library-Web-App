@@ -18,28 +18,6 @@ function BorrowCard({data,refresh,props,returnBookAction,isLoading,isFulfilled,i
         await returnBookAction(id)
         setShow(false)
         return refresh()
-    //     await returnBook(
-         
-    //        localStorage.getItem('token'),
-    //            id,{status:body}
-    //           )
-    //            .then((response) => {
-    //             setShow(false)
-    //                console.log(response)
-    //                }
-                    
-    //                  )
-      
-                  
-               
-    //            .catch((error) => {
-    //                console.log(error)
-                 
-                 
-    //            })
-    //            console.log(id)
-    //            return refresh()
-       
      }
      
    function handleHide ()  {setShow(false)}

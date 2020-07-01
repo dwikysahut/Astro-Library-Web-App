@@ -92,44 +92,6 @@ class EditBookModal extends Component {
 
     }
 
-    // getData = async () => {
-
-
-    //     await getBookById(
-    //         localStorage.getItem('token'),
-    //         this.props.id
-    //     )
-    //         .then((response) => {
-    //             this.setState({
-    //                 id: response.data.data.id,
-    //                 title: response.data.data.title,
-    //                 description: response.data.data.description,
-    //                 image: response.data.data.image,
-    //                 genre_id: response.data.data.genre_id,
-    //                 genre_name: response.data.data.genre,
-    //                 author_name: response.data.data.author,
-
-    //                 author_id: response.data.data.author_id,
-    //                 status: response.data.data.status,
-    //                 data: response.data.data
-    //             }
-    //             )
-
-    //         })
-    //         .catch((error) => {
-
-    //             // if (error.response.data.data.message == "TokenExpiredError") {
-    //             //     this.props.history.push('/auth/token')
-    //             // }
-    //             // alert(error.response.data.data.message)
-    //             // this.props.history.push('/auth/login')
-    //             // console.log(error.response.data.data.message)
-
-    //             console.log(error)
-    //         })
-
-    // }
-    // }
     handleHide = () => {
         this.setState({
             show: false,
@@ -145,15 +107,6 @@ class EditBookModal extends Component {
     handlerSubmit = async (e) => {
         let formData = new FormData()
         e.preventDefault()
-        // if (!this.state.title || !this.state.description) {
-        //     this.setState({isFill:false})
-
-        //     // alert("Data can't Empty")
-        //     return false
-        // }
-
-        //  this.setState({isDone:true})
-        //  const id=this.props.match.params.id
         if (this.state.isFill === true) {
 
             formData.append('title', this.state.title)
@@ -263,7 +216,9 @@ class EditBookModal extends Component {
 
                     <Button variant="dark" type="button" style={{ "float": "right", "borderRadius": "10%" }} onClick={this.handleShow}>
                         Edit
-</Button> : <></>
+</Button> :  <Button variant="transparent" disabled type="button" style={{ "float": "right", "borderRadius": "10%" }} onClick={this.handleShow}>
+                     
+</Button>
 
                 }
                 <Modal show={this.state.show} onHide={this.handleHide} size='xl'

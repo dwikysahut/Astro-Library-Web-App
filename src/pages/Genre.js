@@ -11,18 +11,6 @@ import { getGenreActionCreator } from "../redux/actions/GenreAction";
 import { connect } from "react-redux";
 class Genre extends Component {
 
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-
-  //     data: [],
-  //     id: '',
-  //     name: '',
-  //     isSuccess:false
-
-  //   };
-  // }
-
   componentDidMount = () => {
     if(localStorage.getItem('role')==="1"){
     if (this.props.data.length <= 0) {
@@ -43,49 +31,11 @@ class Genre extends Component {
 
 
 
-    // this.props.history.push('/auth/login')
-
-    // console.log(this.props.data.data)
-    //   await allGenre(
-    //     localStorage.getItem('token'),
-    //   )
-    //     .then((response) => {
-
-    //       this.setState({ data: response.data.data }
-
-    //       )
-
-
-    //       console.log(this.state.data)
-
-    //     })
-    //     .catch((error) => {
-    //       if (error.response.data.data.message == "TokenExpiredError") {
-    //         this.props.history.push('/auth/token')
-    //       }
-    //       alert(error.response.data.data.message)
-    //       this.props.history.push('/auth/login')
-    //       console.log(error.response.data.data.message)
-    //     })
-
-
-
   }
 
   componentDidUpdate() {
-
-
-
   }
 
-
-  // handleChange = (e) => {
-  //   e.preventDefault()
-  //   this.setState({
-  //     search: e.target.value
-  //   })
-  //   this.props.onChange(e.target.value)
-  // }
   render() {
     console.log(this.props.data, this.props.isFulfilled)
     if (this.props.errorToken === "TokenExpiredError") {

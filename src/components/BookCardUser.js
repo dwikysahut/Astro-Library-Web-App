@@ -6,28 +6,6 @@ import '../styles/Home.css'
 import '../styles/Card.css'
 function BookCardUser({ data, refresh }) {
   const URL_BASE = process.env.REACT_APP_API
-  // async function deleteBooks() {
-  //   const id = data.id
-  //   await deleteBook(
-
-  //     localStorage.getItem('token'),
-  //     id
-  //   )
-  //     .then((response) => {
-  //       console.log(response)
-  //       alert("Book successfully Removed")
-  //       return refresh()
-  //     }
-
-  //     )
-
-  //     .catch((error) => {
-  //       console.log(error)
-  //     })
-  //   console.log(id)
-  //   return refresh()
-
-  // }
   return (
     <>
 
@@ -98,55 +76,6 @@ function BookCardUser({ data, refresh }) {
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-      {/* <div className="col-md-3 card " style={{ "width":"10rem","height":"auto","margin": "40px" ,borderRadius: "25px"}}>
-        <img className="card-img-top" src={'http://localhost:8080/public/image/' + data.image} className="book-image" alt={data.image} style={{ "width": "100%" }} />
-        <div className="card-body">
-          <h4 className="card-title">{data.title}</h4>
-          <p className="card-text" style={{overflow: "hidden", "textOverflow": "ellipsis" }}>{data.description}</p>
-          {data.status==="Available"?
-          <h5  style={{ "color":"green"}}className="card-text">{data.status}</h5>:
-          <h5  style={{ "color":"red"}}className="card-text">{data.status}</h5>
-        }
-                   </div>
-          <div className="btn-group" style={{margin:"10px"}}  role="group">
-         
-         {data.status=="Unavailable" ?
-          <Link to={`/book/borrow/user/${data.id}`}>
-          <form >
-            <button disabled type="button" className="btn btn-outline-dark" value={data.id}
-
-            >Borrow</button>
-          </form>
-        </Link>:
-   <Link to={`/book/borrow/user/${data.id}`}>
-   <form >
-     <button type="button" className="btn btn-outline-dark" value={data.id}
-
-     >Borrow</button>
-   </form>
- </Link>
-        }
-           
-            <Link to={`/book/detail/${data.id}`}>
-                <form >
-                  <button type="button" className="btn btn-outline-dark" value={data.id}
-
-                  >Detail</button>
-                </form>
-              </Link>
-         
-       
-        </div>
-      </div> */}
-
 
     </>
   )

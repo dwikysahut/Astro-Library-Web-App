@@ -12,7 +12,7 @@ function Carousell({ data, refresh }) {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="library.jpg" width="20%" height="400"
+      src="astro1.jpg" width="20%" height="400"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -23,7 +23,7 @@ function Carousell({ data, refresh }) {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="carousel-book.jpg" width="100%" height="400"
+      src="astro4.jpg" width="100%" height="400"
       alt="Second slide"
     />
     <Carousel.Caption>
@@ -34,7 +34,7 @@ function Carousell({ data, refresh }) {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="carousel2.jpg" width="100%" height="400"
+      src="astro5.jpg" width="100%" height="400"
       alt="Third slide"
     />
     <Carousel.Caption>

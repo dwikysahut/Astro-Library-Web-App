@@ -45,7 +45,7 @@ const App = () => {
        {/* <Route path="/book/admin"  component={BooksAdmin} /> localhost:3000/ */}
        <Route path="/auth/user" exact component={User} /> {/* localhost:3000/ */}
      
-      <Route path="/" exact component={Home} /> {/* localhost:3000/ */}
+      <Route path="/" exact component={localStorage.getItem('token')?Home:Login} /> {/* localhost:3000/ */}
       <Route path="/auth/login" exact component={Login} /> {/* localhost:3000/ */}
       <Route path="/auth/register" component={Register} /> {/* localhost:3000/profile */}
       <Route path="/auth/token" component={RefreshToken} /> {/* localhost:3000/profile */}

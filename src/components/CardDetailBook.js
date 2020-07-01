@@ -21,64 +21,8 @@ function CardDetailBook({ data, props, deleteBookAction, id, refresh }) {
     await deleteBookAction(data.id)
 
     props.history.push('/book')
-    // setSuccess(true)
     setIsShow(true)
     return refresh()
-    // await deleteBook(
-
-    //   localStorage.getItem('token'),
-    //   id
-    // )
-    //   .then((response) => {
-    //     console.log(response)
-    //     setSuccess(true)
-    //     setIsShow(true)
-    //     // alert("Book successfully Removed")
-
-    //  //   return refresh()
-    //   })
-    //   .catch((error) => {
-    //     if (error.response) {
-
-    //       if (error.response.data.data.message == "TokenExpiredError") {
-    //         this.props.history.push('/auth/token')
-    //         alert(error.response.data.data.message)
-    //         this.props.history.push('/auth/login')
-    //         console.log(error.response.data.data.message)
-    //       }
-
-    //       else if(error.response.status===500){
-    //         setSuccess(false)
-    //         setIsShow(true)
-
-
-    //         //  alert(error.response.data.data.message)
-    //         // alert("Cant delete, data still have relation with Book")
-
-
-    //     }
-
-    //     else {
-    //       console.log(error.response.data.data.message)
-    //       localStorage.removeItem('token')
-    //       localStorage.removeItem('refreshToken')
-    //       localStorage.removeItem('email')
-    //       localStorage.removeItem('id')
-    //       localStorage.removeItem('id_user')
-    //       localStorage.removeItem('role')
-    //       this.props.history.push('/auth/logout')
-    //     }
-
-    //     }
-    //     else{
-
-    //         console.log(error)
-    //         alert("delete failed")
-    //         alert("logout, renew error, please relog")
-    //     }
-    //   })
-    // console.log(id)
-    // return refresh()
 
   }
   // function back(){props.history.push('/book')}
@@ -165,37 +109,6 @@ function CardDetailBook({ data, props, deleteBookAction, id, refresh }) {
           </div>
         </div>
       </div>
-
-      {/* {isSuccess === false ?
-					<Modal show={isShow} onHide={handleHide}>
-						<Modal.Header closeButton>
-            <p>Delete Failed</p>
-						</Modal.Header>
-
-					</Modal> : <>
-          <Modal show={isShow} onHide={handleHide}>
-						<Modal.Header closeButton>
-            <p>Delete successfully</p>
-						</Modal.Header>
-            <Modal.Footer closeButton>
-            <Button variant="warning" onClick={()=>{handleHide();back()}}>
-              Okay
-            </Button>
-						</Modal.Footer>
-           
-
-					</Modal>  */}
-      {/* <ModalMessage text={"Data will be Delete "}show={isShow} handleHide={handleHide} handlerSubmit={delGenre}/> */}
-
-      {/* </>
-				} */}
-      {/* <Modal show={isShow} onHide={handleHide}>
-						<Modal.Header closeButton>
-            <p>Delete Failed, Data Have Relations with Book table</p>
-						</Modal.Header>
-
-					</Modal> : <> */}
-
       <Link to={`/book`}>
         <ModalMessage text={"Data will be Delete "} show={isShow} handleHide={handleHide} handlerSubmit={deleteBooks} />
       </Link>

@@ -72,47 +72,7 @@ class Login extends Component {
 			// this.setState({ isMatch: true })
 
 			await this.props.loginUserAction({email,password});
-			this.setState({ isShow: true })
-					
-						// this.setState({ isLogin: true, show: true })
-						// alert("Login success")
-					
-
-
-			// await loginUser({
-			// 	email,
-			// 	password
-			// })
-			// 	.then((response) => {
-
-			// 		console.log(response)
-			// 		if (response.data.status === 200) {
-			// 			this.setState({ isShow: false })
-			// 			localStorage.setItem('role', response.data.data.role)
-			// 			localStorage.setItem('id', response.data.data.id)
-			// 			localStorage.setItem('email', response.data.data.email)
-			// 			localStorage.setItem('refreshToken', response.data.data.refreshToken)
-			// 			localStorage.setItem('token', response.data.data.token)
-			// 			this.setState({ isLogin: true, show: true })
-			// 			// alert("Login success")
-			// 			this.props.history.push('/book')
-
-			// 		}
-
-			// 		else if (response.status === 204 && response.statusText === "No Content") {
-			// 			this.setState({ isMatch: false })
-
-			// 			console.log(response.statusText)
-			// 			console.log("Incorrect Username or password");
-			// 			// alert("Incorrect Username or password");
-
-			// 		}
-			// 	})
-			// 	.catch((error) => {
-
-			// 		console.log(this.state)
-			// 		console.log(error)
-			// 	})
+			this.setState({ isShow: true })			
 		
 	}
 	async componentDidMount() {
@@ -135,8 +95,8 @@ class Login extends Component {
 				<div className="row">
 				
 						<div className="col-sm" style={{ width: "100%"}}>
-							<img src="/library.jpeg" style={{ width: "100%", height: "100%",position: "static" }} alt="library.jpeg"/>
-							<h1 className="top-left" style={{ color: "white" }}>Library App<br></br>
+							<img src="/astro5.jpg" style={{ width: "100%", height: "130%",position: "static" }} alt="library.jpeg"/>
+							<h1 className="top-left" style={{ color: "white" }}>Astro Library<br></br>
 					Make Your History From Now</h1>
 							<br />
 						</div>

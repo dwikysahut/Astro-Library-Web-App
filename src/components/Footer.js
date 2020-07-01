@@ -12,7 +12,7 @@ const Footer = () => {
       </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light  justify-content-center">
         <div >
-          <div className="container">
+          <div className="container"  style={{ margin: "10px 0 0 70px"}}>
             <span>@Dwikysh</span>
           </div>
         </div>

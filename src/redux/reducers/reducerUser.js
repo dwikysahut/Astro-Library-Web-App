@@ -143,7 +143,7 @@ const dataUser = (prevState = initialValue, action) => {
                 errorToken: action.payload.response.data.data.message
             }
         case loginUserAction + fulfilled:
-            if (action.payload.status == 204) {
+            if (action.payload.status === 204 || action.payload.status === '204') {
                 return {
                     isRejected: true
                 }

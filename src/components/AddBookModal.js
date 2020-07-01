@@ -90,56 +90,9 @@ class AddBookModal extends Component {
         await this.props.postBookAction(formData)
         this.handleHide()
          return this.props.refresh()
-        // await postBook(
-        //     localStorage.getItem('token'),
-        //     formData
-        // )
-        //     .then((response) => {
-        //         console.log(this.state)
-        //         // alert('add succesfull')
-        //         this.setState({ isShow: true })
-        //         this.setState({ isMatch: true })
-        //          return this.props.refresh()
-        //         console.log('This file size is: ' + this.state.image.size / 1024 / 1024 + " MB ");
-        //     }
-
-        //     )
-        //     .catch((error) => {
-        //         if (error.response) {
-        //             if (error.response.data.data.message == "TokenExpiredError") {
-        //                 this.props.history.push('/auth/token')
-
-        //                 this.props.history.push('/auth/login')
-        //                 console.log(error.response.data.data.message)
-        //             }
-        //             else {
-        //                 console.log(error)
-        //             }
-        //         }
-        //         this.setState({ isShow: true })
-        //         this.setState({ isMatch: false })
-        //         console.log(error)
-        //         alert("add book failed")
-        //     })
-
     }
     componentDidMount = async () => {
-        //     await allAuthor(localStorage.getItem('token')).then((response) => {
-        //         this.setState({
-        //             author: response.data.data
-        //         })
-        //     }).catch((error) => {
-        //         console.log(error)
-        //     })
-
-
-        //     await allGenre(localStorage.getItem('token')).then((response) => {
-        //         this.setState({
-        //             genre: response.data.data
-        //         })
-        //     }).catch((error) => {
-        //         console.log(error)
-        //     })
+      
     }
 
     render() {
@@ -234,102 +187,6 @@ class AddBookModal extends Component {
                 </Modal>
 
 
-
-
-                {/* <button type="button" style={{ marginLeft: "10px" }} className="btn btn-dark" data-toggle="modal" data-target="#example">
-                    Add Book
-</button>
-                <div className="modal fade" style={{}} id="example" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content" style={{ "width": "150%", "borderRadius": "25px" }}>
-                            <div className="modal-header">
-
-                                <h1>Library App</h1>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div className="modal-body">
-                                {this.state.isFill === false ? <Alert variant="danger">
-                                    Fill in all forms
-            </Alert> : <></>}
-                              
-                                <form onSubmit={this.handlerSubmit}>
-
-                                    <h2>Add Book</h2>
-                                    <div className="form-group">
-                                        <label >Title</label>
-                                        <input type="text" required name="title" className="form-control" aria-describedby="emailHelp" onChange={this.handlerChange} />
-
-                                    </div><div className="form-group">
-                                        <label >Description</label>
-                                        <textarea type="text" rows="4" required name="description" className="form-control" aria-describedby="emailHelp" onChange={this.handlerChange} />
-
-                                    </div><div className="form-group">
-                                        <label >Image</label>
-                                        <input type="file" accept=".jpg, .png, .jpeg,|image/*" required name="image" className="form-control" aria-describedby="emailHelp" onChange={this.handlerChangeImage} />
-                                        {this.state.isImage === false ? <Alert variant="danger">
-                                            Image can't More than 1  Mb  File will not saved or use image before
-            </Alert> : <></>}
-                                    </div>
-                                    <div className="form-group">
-                                        <label >Genre</label>
-
-                                        <select name="genre_id" required className="form-control" onChange={this.handlerChange} defaultValue={this.state.genre_id}>
-                                            <option value="1">Select Genre(Default)</option>
-                                            {optionGenre}
-                                        </select>
-                                    </div>
-                                    <div className="form-group">
-                                        <label >Author</label>
-
-                                        <select name="author_id" required className="form-control" onChange={this.handlerChange} defaultValue={this.state.author_id}>
-                                            <option value="1">Select Author(Default)</option>
-                                            {optionAuthor}
-                                        </select>
-                                    </div>
-
-
-                                    <div className="form-group">
-                                        <label >Status</label>
-                                        <select className="form-control" required name="status" onChange={(e) => this.setState({ status: e.target.value })}>
-                                            <option value="">Status (Default Available)</option>
-                                            <option value="Available">Available</option>
-                                            <option value="Unavailable">Unavailable</option>
-
-                                        </select>
-                                    </div>
-                                </form>
-                                <div className="modal-footer" style={{ borderRadius: " 0 0 20px 20px " }}>
-                                    <button type="button" style={{ "padding": "15px" }} data-dismiss="modal" className="btn btn-outline-success" onClick={this.handlerSubmit}>
-                                        Add
-                                </button>
-                                    <button type="button" className="btn btn-outline-warning" data-dismiss="modal">Cancel</button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-                {/*                        
-                        </div>
-                    </div>
-                </div> */}
-                {/* {this.state.isMatch === false ?
-                    <Modal show={this.state.isShow} onHide={this.handleHide}>
-                        <Modal.Header closeButton>
-                            <h4>Add Failed ,Image size More Than Limit </h4>
-                        </Modal.Header>
-
-                    </Modal> : <>
-                        <Modal show={this.state.isShow} onHide={this.handleHide}>
-                            <Modal.Body>
-                                <p style={{ textAlign: "center" }}>Add Success</p>
-                            </Modal.Body>
-
-                        </Modal>
-                    </>
-                } */}
             </>
 
         );
