@@ -1,7 +1,7 @@
 import Axios from 'axios'
 const qs = require('querystring')
 
-const URL_BASE = process.env.REACT_APP_API //localhost:3000/books?title=harry potter
+const URL_BASE =  process.env.REACT_APP_API //localhost:3000/books?title=harry potter
 // const URL_API = 'http://localhost:8080'
 
 //login register

@@ -68,8 +68,6 @@ class Login extends Component {
 				
 				}
 			}
-			this.setState({ isShow: true })
-			// this.setState({ isMatch: true })
 
 			await this.props.loginUserAction({email,password});
 			this.setState({ isShow: true })			

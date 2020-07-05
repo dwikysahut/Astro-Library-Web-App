@@ -16,6 +16,7 @@ import { getAuthorActionCreator } from "../redux/actions/AuthorAction";
 import { getGenreActionCreator } from "../redux/actions/GenreAction";
 
 // const qs = require('querystring')
+const URL_BASE = process.env.REACT_APP_API
 
 class BookDetail extends Component {
   state = {
@@ -95,7 +96,7 @@ class BookDetail extends Component {
         <h2 style={{fontFamily: "Roboto",marginLeft:40}} >Book Detail</h2>
 
         {this.props.isFulfilled === true && data ?
-          <div className="container" style={{ backgroundImage: `url('http://localhost:8080/public/image/${data.image}')`, backgroundSize: "100% 40%", borderStyle: "ridge", borderRadius: "25px", maxWidth: "600px", minWidth: "475px", backgroundRepeat: "no-repeat" }}>
+          <div className="container" style={{ backgroundImage: `url('${URL_BASE}/public/image/${data.image}')`, backgroundSize: "100% 40%", borderStyle: "ridge", borderRadius: "25px", maxWidth: "600px", minWidth: "475px", backgroundRepeat: "no-repeat" }}>
             <EditBookModal id={this.props.match.params.id} refresh={this.componentDidMount} data={data} />
 
             <div className="row">
