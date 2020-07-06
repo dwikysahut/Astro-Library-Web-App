@@ -11,10 +11,8 @@ import BookDetail from './pages/BookDetail'
 
 
 import ManageGenre from './pages/ManageGenre'
-// import AddGenre from './pages/AddGenre'
 import Genre from './pages/Genre'
 
-// import AddAuthor from './pages/AddAuthor'
 import ManageAuthor from './pages/ManageAuthor'
 import Author from './pages/Author';
 import Home from './pages/Home';
@@ -81,48 +79,6 @@ const App = () => {
      </Provider>
   );
 };
-// class App extends Component {
-//   //  const classes = useStyles();
-    
-//   //changeState=()=>{
-//     //     this.setState({
-//     //         name: "profile",
-//     //         date: "sadsad"
-//     //     });
 
-//     // };
-
-//     // componentDidMount(){
-//     //     console.log('di mount');
-//     // }
-//     // shouldComponentUpdate(){ 
-//     //     return true;
-//     // }
-
-
-//     // state = {
-//     //     name: "Home",
-//     //     date: "April 28th 2020"
-//     // };
-
-//     render() {
-//         return (
-            
-         
-
-//             <div>
-//              <Home/>
-//             </div>
-//         );
-// }
-// }
-
-// function App() {
-//   return (
-//     <div>
-//       <Header/>
-//          </div>
-//   );
-// }
 
 export default App;

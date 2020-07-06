@@ -18,27 +18,6 @@ class Logout extends React.Component {
     componentDidMount = async () => {
         await this.props.logoutUserAction()
         this.setState({ show:true })
-        // await deleteToken(
-        //     localStorage.getItem('token'),
-        // )
-        //     .then((response) => {
-        //         this.state.show = true
-        //         console.log(response)
-        //         //  alert("Logout successfully ")
-        //         localStorage.removeItem('token')
-        //         localStorage.removeItem('refreshToken')
-        //         localStorage.removeItem('email')
-        //         localStorage.removeItem('id')
-        //         localStorage.removeItem('id_user')
-        //         localStorage.removeItem('role')
-
-        //         //  this.props.history.push('/auth/login')
-
-        //     })
-        //     .catch((error) => {
-        //         this.setState({ show: false })
-        //         console.log(error)
-        //     })
     }
 
     render() {

@@ -23,27 +23,6 @@ class Author extends Component {
   getData = async () => {
     await this.props.getGenreAction();
     console.log()
-    // await allAuthor(
-    //   localStorage.getItem('token'),
-    // )
-    //   .then((response) => {
-
-    //     this.setState({ data: response.data.data }
-
-    //     )
-    //     console.log(this.state.data)
-
-    //   })
-    //   .catch((error) => {
-    //     if (error.response.data.data.message == "TokenExpiredError") {
-    //       this.props.history.push('/auth/token')
-    //     }
-    //     alert(error.response.data.data.message)
-    //     this.props.history.push('/auth/login')
-    //     console.log(error.response.data.data.message)
-    //   })
-
-
   }
   componentDidMount = () => {
     if(localStorage.getItem('role')==="1"){

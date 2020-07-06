@@ -43,41 +43,6 @@ class AddBorrow extends Component {
 
     await this.props.addBorrowAction(id)
 
-    // this.setState({ isShow: false })
-    // this.props.history.push('/data/author')
-
-
-    // await addBorrow(
-
-    //    localStorage.getItem('token'),
-    //        this.state.id,
-
-    //       )
-    //        .then((response) => {
-    //            console.log(response)
-    //             //  alert("Book successfully add to List")
-
-    //           // this.props.history.push('/book')
-
-    //            }
-
-    //              )
-
-
-
-    //        .catch((error) => {
-    //            console.log(error)
-    //            alert(" Failed to add to List")
-    //            if(error.response.data.data.message=="TokenExpiredError"||error.response.data.data.message=="JSONWebTokenError"){
-    //             this.props.history.push('/auth/token')
-    //           }
-    //           alert(error.response.data.data.message)
-    //           this.props.history.push('/auth/login')
-    //           console.log(error.response.data.data.message)
-    //        })
-
-
-
   }
 
 

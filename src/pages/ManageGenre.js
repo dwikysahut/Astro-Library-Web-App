@@ -71,27 +71,7 @@ class ManageGenre extends Component {
 
   }
    componentDidUpdate=(prevState)=> {  
-    //  console.log(this.state.dataById)
-    // // const id=this.props.match.params.id
-    //    const dataById=this.props.dataGenre.filter(dataGenre=>dataGenre.id==id)
-    //    const obj=dataById[0].name
-    //    console.log(obj)
-    //  console.log(this.props.dataGenre[0])
-    // if(prevProps.selectedData!==this.props.selectedData){
-    //     this.setState({
-    //        name:this.props.selectedData.name
-    //         // data: response.data.data
-    //     }
-    //     )
-    // }
-  //   if(prevState!==this.state){
-  //     this.setState({
-  //        name:obj
-  //         // data: response.data.data
-  //     }
-  //     )
-  // }
-  
+
 }
  async componentDidMount(){
   // eslint-disable-next-line eqeqeq

@@ -55,20 +55,6 @@ function BorrowCard({data,refresh,props,returnBookAction,isLoading,isFulfilled,i
             </tr>
          
             <ModalMessage text={"Are You Sure To Return Book"}show={show} handleHide={handleHide} handlerSubmit={returnBorrowUser}/>
-     
-           {/* <Modal show={show} onHide={handleHide}>
-          <Modal.Body>
-          <h2>Book wiil return</h2>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="warning" onClick={(e)=> {returnBorrowUser(e); handleHide()}}>
-              Yes
-            </Button>
-            <Button variant="dark" onClick={handleHide}>
-              Cancel
-            </Button>
-          </Modal.Footer>
-        </Modal> */}
             
                   </>
     )

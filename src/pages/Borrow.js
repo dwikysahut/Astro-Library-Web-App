@@ -32,85 +32,9 @@ class Borrow extends Component {
     if (localStorage.getItem('role') === "1") {
 
       await this.props.getAllBorrowAction();
-      // await getAllBorrow(
-      //   localStorage.getItem('token'),
-      // )
-      //   .then((response) => {
-
-      //     this.setState({ data: response.data.data }
-
-      //     )
-
-
-      //     console.log(this.state.data)
-
-      //   })
-      //   .catch((error) => {
-      //     if (error.response) {
-      //       if (error.response.data.data.message == "TokenExpiredError") {
-      //         this.props.history.push('/auth/token')
-      //         alert(error.response.data.data.message)
-      //         this.props.history.push('/auth/login')
-      //         console.log(error.response.data.data.message)
-
-      //       }
-      //       else {
-      //         console.log(error.response.data.data.message)
-      //         localStorage.removeItem('token')
-      //         localStorage.removeItem('refreshToken')
-      //         localStorage.removeItem('email')
-
-      //         localStorage.removeItem('id')
-      //         localStorage.removeItem('id_user')
-      //         localStorage.removeItem('role')
-      //       }
-      //     }
-      //     else {
-      //       console.log(error)
-      //     }
-      //     console.log(error)
-
-      //   })
     }
     else {
       await this.props.getUserBorrowAction();
-      // await getUserBorrow(
-      //   localStorage.getItem('token'),
-      // )
-      //   .then((response) => {
-
-      //     this.setState({ data: response.data.data }
-
-      //     )
-
-      //       console.log(response)
-      //     console.log(this.state.data)
-
-      //   })
-      //   .catch((error) => {
-      //     if (error.response) {
-      //       if (error.response.data.data.message == "TokenExpiredError") {
-      //         this.props.history.push('/auth/token')
-      //         alert(error.response.data.data.message)
-      //         this.props.history.push('/auth/login')
-      //         console.log(error.response.data.data.message)
-
-      //       }
-      //       else {
-      //         console.log(error.response.data.data.message)
-      //         localStorage.removeItem('token')
-      //         localStorage.removeItem('refreshToken')
-      //         localStorage.removeItem('email')
-
-      //         localStorage.removeItem('id')
-      //         localStorage.removeItem('id_user')
-      //         localStorage.removeItem('role')
-      //       }
-      //     }
-      //     else {
-      //       console.log(error)
-      //     }
-      //   })
 
 
 
@@ -162,20 +86,17 @@ class Borrow extends Component {
 
 
         <div >
-          <div className="form-row">
-            <form className="form-inline my-4 my-lg-0">
-              {/* <Link to={"/data/author/add"}>
-<button type="submit" className="btn btn-secondary" >Add Borrow List</button>
-        </Link> */}
 
-            </form>
-          </div>
-
-          {this.props.data.length===0?
+          {this.props.data.length===0 && this.props.isFulfilled?
                 <h2 style={{margin:"20% 20% 20% 40%"}}>No Data in Borrow list</h2>
                     :
           <>
              <h2 style={{margin:"0% 0% 0% 0%"}}>Borrow List & History</h2>
+             {this.props.isLoading?
+           <div style={{ margin: "10% 30% 30% 50%" }} class="spinner-border" role="status"><span class="sr-only">Loading...</span>
+           </div>
+           :<></>
+          }
           <div className="App">
             <div className="left">
               <table className="table " style={{ margin: "2% 0% 30% 0%" }}>
@@ -189,7 +110,10 @@ class Borrow extends Component {
                     <th>Borrow at</th>
                     <th>Return at</th>
                     <th>Status</th>
-                    <th>Action</th>
+                    {localStorage.getItem('role')===1||localStorage.getItem('role')==='1'?
+                    <></>: <th>Action</th>
+                  }
+                    
 
                   </tr>
                 </thead>

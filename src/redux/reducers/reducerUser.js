@@ -225,7 +225,11 @@ const dataUser = (prevState = initialValue, action) => {
             }
         case refreshTokenAction + fulfilled:
             localStorage.removeItem('token')
+            localStorage.removeItem('refreshToken')
+
             localStorage.setItem('token', action.payload.data.data.token)
+            localStorage.setItem('refreshToken', action.payload.data.data.refreshToken)
+
 
             return {
                 ...prevState,

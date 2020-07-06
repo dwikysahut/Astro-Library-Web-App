@@ -30,29 +30,6 @@ class RefreshToken extends Component {
       await this.props.refreshTokenAction({token})
       // alert('Token Has Been Renew')
       this.props.history.push('/')
-            //  await refreshToken(
-            //     {token:this.state.token}
-          
-            //               )
-            //   .then((response) => {      
-            //        localStorage.removeItem('token')
-            //        localStorage.setItem('token',response.data.data.token)
-            //       alert('Token Has Been Renew')
-                 
-            //      this.props.history.push('/')
-
-            //   })
-            //   .catch((error) => {
-            //     alert('Renew Failed')
-            //     localStorage.removeItem('token')
-            //     localStorage.removeItem('refreshToken')
-            //     localStorage.removeItem('email')
-            //     localStorage.removeItem('id')
-            //     localStorage.removeItem('id_user')
-            //     localStorage.removeItem('role')
-            //       console.log(error)
-            //   })
-   
       
       }
     render() {
