@@ -80,7 +80,6 @@ REACT_APP_API=http://YOUR_IP_ADDRESS:8080
   <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.17.png">
   <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.39.png">
   <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.48.png">
-  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.25.07.png">
 </div>
 
 
