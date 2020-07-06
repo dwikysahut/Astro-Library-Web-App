@@ -1,68 +1,95 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Astro Library</h1>
+<p align="center">
+  <img width="300" src="./src/assets/astrolibrary.png"/>
+</p>
 
-## Available Scripts
+## Contents
 
-In the project directory, you can run:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Usage](#usage-for-development)
+- [Screenshots](#screenshots)
+- [Release Web](#release-web)
+- [Related Project](#related-project-backend)
+- [Contributors](#contributor)
 
-### `yarn start`
+## Introduction
+this app built with React Native and the database use MySql. Astro Library helps you to have more interest in reading. with this application, users are made easy to find books and borrow it quickly and easily.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
+1. Users login or register if don't have account
+2. Users can search and explore books from various genres
+3. Users can see the details of the book
+4. Users can borrow the available books
+5. Users can return the book without having to go to the location. so do it online and view the history borrow.
+6. There is Admin role. Admin can login and control all data, like add, edit, delete for (books,genre,author,user)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `yarn build`
+1. [`react`](https://reactjs.org/docs/create-a-new-react-app.html)
+2. Node_modules `npm install` or `yarn install`
+3. [`React Bootstrap`] (https://react-bootstrap.github.io/)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Usage for development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone this Project 
+2. Open app's directory in CMD or Terminal
+3. Type `npm install` or `yarn install`
+4. make the env file on root folder and fill REACT_APP_API with your address and backend port 
+```
+REACT_APP_API=http://YOUR_IP_ADDRESS:PORT BACKEND  
 
-### `yarn eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+example
+```
+REACT_APP_API=http://YOUR_IP_ADDRESS:8080  
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+5. clone [`Backend-Astro-Library-API`](https://github.com/dwikysahut/Backend-Astro-Library-API) and follow Usage for Development
+6. After Backend ready, go to his project again and Type `react-native run-android` or `yarn run android` if you use yarn
+7. Register your account
+8. Login to use
+9. Lets find and borrow your favorite books !!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ 
+## Screenshots
+<div align="center">
+  <h4>USER</h4>
+  </div>
+  
+<div align="center">
+  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.21.57.png">
+  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.23.26.png">
+  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.28.png">
+  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.00.png">
+ 
 
-## Learn More
+</div>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<div align="center">
+  <h4>ADMIN</h4>
+  </div>
+  
+<div align="center">
+  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.17.png">
+  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.39.png">
+  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.48.png">
+  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.25.07.png">
+</div>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Release WEB
+ [`Astro-Library-Web-App`](http://54.175.92.50/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Related Project (Backend)
+* [`Backend-Astro-Library-API`](https://github.com/dwikysahut/Backend-Astro-Library-API)
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Contributor
+© [Dwiky Satria Hutomo](https://github.com/dwikysahut 'Dwiky Satria Hutomo')
