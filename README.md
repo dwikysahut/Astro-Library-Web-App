@@ -64,7 +64,7 @@ REACT_APP_API=http://YOUR_IP_ADDRESS:8080
   </div>
   
 <div align="center">
-  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.21.57.png">
+  <img width="500" src="./src/assets/Screen Shot 2021-12-04 at 23.52.48.png">
   <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.23.26.png">
   <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.28.png">
   <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.00.png">
@@ -77,7 +77,7 @@ REACT_APP_API=http://YOUR_IP_ADDRESS:8080
   </div>
   
 <div align="center">
-  <img width="500" src="./src/assets/Screen Shot 2021-12-04 at 23.52.48.png">
+  <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.17.png">
   <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.39.png">
   <img width="500" src="./src/assets/Screen Shot 2020-06-29 at 00.24.48.png">
 </div>
