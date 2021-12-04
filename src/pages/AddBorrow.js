@@ -52,7 +52,7 @@ class AddBorrow extends Component {
     const id_user = localStorage.getItem('id')
     console.log("mount " + this.state.id)
 
-    this.setState({ id: id_user })
+    // this.setState({ id: id_user })
 
     console.log("id book : " + id)
     // const id=data.id

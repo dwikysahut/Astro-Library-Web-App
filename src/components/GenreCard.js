@@ -8,7 +8,7 @@ import { deleteGenreActionCreator } from "../redux/actions/GenreAction";
 import { connect } from "react-redux";
 
 
-function GenreCard({ data, refresh, props, deleteGenreAction, isLoading, isFulfilled, isRejected, errorDelete }) {
+function GenreCard({ data , deleteGenreAction , isFulfilled , errorDelete }) {
   // console.log(props)
   const [isSuccess, setSuccess] = useState(true);
   const [isShow, setIsShow] = useState(false);
@@ -36,13 +36,13 @@ function GenreCard({ data, refresh, props, deleteGenreAction, isLoading, isFulfi
       setIsShow(true)
       //  alert("delete failed")
       setSuccess(false)
-      return refresh()
+      // return refresh()
     }
 
     if (isFulfilled === true) {
       console.log("success")
       console.log(isSuccess)
-      return refresh()
+      // return refresh()
     }
 
 

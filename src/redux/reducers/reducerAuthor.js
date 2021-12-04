@@ -117,7 +117,7 @@ const dataAuthor = (prevState = initialValue, action) => {
                 case putAuthorAction + fulfilled:
                     const newData = prevState.data.map(dataAuthor => {
                                // eslint-disable-next-line eqeqeq
-                        if (dataAuthor.id == action.payload.data.data.id) {
+                        if (dataAuthor.id === parseInt(action.payload.data.data.id)) {
                             return action.payload.data.data;
                         }
                         return dataAuthor;
@@ -154,7 +154,7 @@ const dataAuthor = (prevState = initialValue, action) => {
                     case deleteAuthorAction + fulfilled:
                         const deleteData = prevState.data.filter(
                               // eslint-disable-next-line eqeqeq
-                            dataAuthor=>dataAuthor.id!= parseInt(action.payload.data.data.id)
+                            dataAuthor=>dataAuthor.id !== parseInt(action.payload.data.data.id)
                         )
                         return {
                             ...prevState,

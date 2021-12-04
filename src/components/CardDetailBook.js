@@ -64,7 +64,7 @@ function CardDetailBook({ data, props, deleteBookAction, id, refresh }) {
         </Link>
         :
 
-        <form >
+        <form >  
           <button type="button" disabled className="btn btn-outline-dark" value={data.id}
 
           >Book Unavailable</button>
@@ -95,7 +95,7 @@ function CardDetailBook({ data, props, deleteBookAction, id, refresh }) {
             <h4 style={{ "color": "red" }} className="customtext">{data.status}</h4>
           }
           <p>Date Added :   {new Date(data.date_added).toDateString()}</p>
-          <p >Date Update : {new Date(data.date_updated).toDateString()}</p>
+          <p >Date Updated : {new Date(data.date_updated).toDateString()}</p>
           <p className="monospace" style={{ textAlign: "justify" }}>{data.description}</p>
           <h5 className="sanserif">Author : {data.author}</h5>
 

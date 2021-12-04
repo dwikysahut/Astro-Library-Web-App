@@ -7,7 +7,7 @@ import { Modal } from 'react-bootstrap'
 import { deleteAuthorActionCreator } from "../redux/actions/AuthorAction";
 import { connect } from "react-redux";
 
-function AuthorCard({ data, refresh, props, deleteAuthorAction, isLoading, isFulfilled, isRejected, errorDelete }) {
+function AuthorCard({ data, refresh, deleteAuthorAction, isLoading, isFulfilled, errorDelete }) {
   const [isSuccess, setSuccess] = useState(true);
 
   const [isShow, setIsShow] = useState(false);
@@ -25,13 +25,12 @@ function AuthorCard({ data, refresh, props, deleteAuthorAction, isLoading, isFul
       setIsShow(true)
       //  alert("delete failed")
       setSuccess(false)
-      return refresh()
+      // return refresh()
     }
 
     if (isFulfilled === true) {
       console.log("success")
       console.log(isSuccess)
-      return refresh()
     }
 
   }

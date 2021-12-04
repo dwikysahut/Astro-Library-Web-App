@@ -19,9 +19,6 @@ class Borrow extends Component {
       id: '',
       name: '',
       isEmpty:false
-
-
-
     };
   }
 

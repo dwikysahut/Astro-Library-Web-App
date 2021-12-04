@@ -10,18 +10,8 @@ import { Link } from 'react-router-dom'
 import { getAuthorActionCreator } from "../redux/actions/AuthorAction";
 import { connect } from "react-redux";
 class Author extends Component {
-
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-
-  //     data: [],
-  //     id: '',
-  //     name: '',
-  //   };
-  // }
   getData = async () => {
-    await this.props.getGenreAction();
+    await this.props.getAuthorAction();
     console.log()
   }
   componentDidMount = () => {
@@ -37,20 +27,6 @@ class Author extends Component {
   
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-
-
-  // }
-
-  // shouldComponentUpdate() {
-  //   return true
-  // }
-  // handleChange = (e) => {
-  //   this.setState({
-  //     search: e.target.value
-  //   })
-  //   this.props.onChange(e.target.value)
-  // }
   componentDidUpdate() {
       
      
@@ -68,15 +44,13 @@ class Author extends Component {
   }
     const renderData = this.props.data.map(data => {
       return (
-        <AuthorCard data={data} key={data.id} refresh={this.componentDidMount} props={this.props}/>
+        <AuthorCard data={data} key={data.id} props={this.props}/>
       )
     })
     return (
       <>
         <Navbar >
         </Navbar>
-      
-      
       
           <h2 >Author List</h2>
       
@@ -118,7 +92,7 @@ const mapStateToProps = ({
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    getGenreAction: () => {
+    getAuthorAction: () => {
       dispatch(getAuthorActionCreator());
     },
    

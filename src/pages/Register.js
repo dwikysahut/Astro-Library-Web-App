@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 // import { registerUser } from '../utils/http'
 import ModalAlert from '../components/ModalAlert'
 import '../styles/Home.css'
-import {  Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 // import ModalMessage from '../components/ModalMessage'
 import { registerUserActionCreator } from "../redux/actions/UserAction.js";
 import { connect } from "react-redux";
@@ -28,10 +28,10 @@ class Register extends Component {
 		isEmptyEmail: true,
 		isEmptyPassword: true,
 		isSuccess: false,
-		isEmailValid:true,
-		isMatch:true,
+		isEmailValid: true,
+		isMatch: true,
 		isShow: false,
-		emailExist:'',
+		emailExist: '',
 	}
 	handleHide = () => {
 		this.setState({ isShow: false })
@@ -50,7 +50,7 @@ class Register extends Component {
 			// }
 
 
-			this.setState({ [e.target.name]: e.target.value, isEmpty: false,isEmptyEmail:false ,isEmptyPassword:false}, () => { })
+			this.setState({ [e.target.name]: e.target.value, isEmpty: false, isEmptyEmail: false, isEmptyPassword: false }, () => { })
 			console.log(this.state.email)
 			console.log(this.state.password)
 		}
@@ -64,11 +64,11 @@ class Register extends Component {
 	register = async (e) => {
 		console.log(this.state)
 		if (this.state.email) {
-				
+
 			// eslint-disable-next-line no-useless-escape
 			if (! /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) {
 				// this.setState({ isEmailValid: false })
-	
+
 				//  alert("You have entered an invalid email address!")
 				return (false)
 			}
@@ -87,15 +87,15 @@ class Register extends Component {
 			this.setState({ isEmptyPassword: true })
 			return
 		}
-		
-		if (this.state.password2 !== this.state.password ) {
+
+		if (this.state.password2 !== this.state.password) {
 			// alert("password and Re-Enter Password Doesn't Match")
 			this.setState({ isMatch: false })
 			return false
 		}
-		else{
+		else {
 			this.setState({ isMatch: true })
-		
+
 		}
 
 		if (this.state.isEmpty === false && this.state.password.length > 4) {
@@ -105,7 +105,7 @@ class Register extends Component {
 			console.log(this.state)
 			// e.preventDefault()
 			const { email, password, role } = this.state
-			await this.props.registerUserAction({email,password,role});
+			await this.props.registerUserAction({ email, password, role });
 			this.state.isSuccess = true
 			this.setState({ isShow: true })
 			// await registerUser({
@@ -114,40 +114,40 @@ class Register extends Component {
 			// 	role
 
 			// })
-				// .then((response) => {
+			// .then((response) => {
 
-				// 	console.log(this.state)
-				// 	console.log(response)
-				// 	if (response.data.status === 200) {
-				// 		this.state.isSuccess = true
-				// 		this.setState({ isSuccess: true })
-				// 		console.log(this.state.isSuccess)
-				// 		alert("Register success")
+			// 	console.log(this.state)
+			// 	console.log(response)
+			// 	if (response.data.status === 200) {
+			// 		this.state.isSuccess = true
+			// 		this.setState({ isSuccess: true })
+			// 		console.log(this.state.isSuccess)
+			// 		alert("Register success")
 
-				// 		// console.log(response)
-				// 		this.setState({ email: email })
-				// 		this.setState({ password: password })
-				// 		this.setState({ role: role })
-				// 		this.props.history.push('/auth/login')
-				// 	}
-				// 	else if (response.data.status === 400) {
-				// 		alert("Email has taken")
-				// 	}
-				// 	else if (response.data.status === 500) {
-				// 		alert("error")
-				// 	}
-				// 	else if (response.status === 204) {
-				// 		console.log('cant null')
-				// 		alert("email and password must have Value");
-				// 	}
-				// 	else {
-				// 		alert("Register Failed");
-				// 	}
-				// })
-				// .catch((error) => {
-				// 	alert("Email has taken")
-				// 	console.log(error)
-				// })
+			// 		// console.log(response)
+			// 		this.setState({ email: email })
+			// 		this.setState({ password: password })
+			// 		this.setState({ role: role })
+			// 		this.props.history.push('/auth/login')
+			// 	}
+			// 	else if (response.data.status === 400) {
+			// 		alert("Email has taken")
+			// 	}
+			// 	else if (response.data.status === 500) {
+			// 		alert("error")
+			// 	}
+			// 	else if (response.status === 204) {
+			// 		console.log('cant null')
+			// 		alert("email and password must have Value");
+			// 	}
+			// 	else {
+			// 		alert("Register Failed");
+			// 	}
+			// })
+			// .catch((error) => {
+			// 	alert("Email has taken")
+			// 	console.log(error)
+			// })
 		}
 	}
 	shouldComponentUpdate() {
@@ -165,9 +165,9 @@ class Register extends Component {
 		return (
 
 			<>
-			{this.state.isSuccess===true?	
-		<Link to="/auth/login">
-			<Modal show={this.state.isShow} onHide={this.handleHide}>
+				{this.state.isSuccess === true ?
+					<Link to="/auth/login">
+						<Modal show={this.state.isShow} onHide={this.handleHide}>
 							<Modal.Body>
 								<h2>Register Success</h2>
 							</Modal.Body>
@@ -176,51 +176,51 @@ class Register extends Component {
 
 							</Modal.Footer>
 						</Modal>
-						</Link>:<></>}
-			{this.props.isRejected===true?
-			<Modal show={this.state.isShow} onHide={this.handleHide}>
-			<Modal.Body>
-				<h2>Email  Has Taken</h2>
-			</Modal.Body>
-			<Modal.Footer>
+					</Link> : <></>}
+				{this.props.isRejected === true ?
+					<Modal show={this.state.isShow} onHide={this.handleHide}>
+						<Modal.Body>
+							<h2>Email  Has Taken</h2>
+						</Modal.Body>
+						<Modal.Footer>
 
 
-			</Modal.Footer>
-		</Modal>:<></>
-			}
-				<Navbar />
+						</Modal.Footer>
+					</Modal> : <></>
+				}
+				{/* <Navbar /> */}
 
 				<div className="row">
-				<div className="col-sm" style={{ width: "100%" }}>
-							<img src="/astro5.jpg" style={{ width: "100%", height: "100%" }} alt="library.jpeg"/>
-							<h1 className="top-left" style={{ color: "white" }}>Astro Library<br></br>
-					Make Your History From Now</h1>
-							<br />
-						</div>
 					<div className="col-sm">
-						<div className="">
-						<h6 className="text-monospace" >Register</h6>
-							<form style={{marginLeft:"20%"}}>
-						
+						<img src="/astro5.jpg" style={{ width: "100%", height: "100%" }} alt="library.jpeg" />
+						<h1 className="top-left" style={{ color: "white" }}>Astro Library<br></br>
+					Make Your History From Now</h1>
+						<br />
+					</div>
+					<div className="col-sm">
+						<div>
+							<h6 className="text-monospace" >Register</h6>
+							<form style={{ marginLeft: "50px" }}>
+
 								<div className="form-group ">
 									<label >Email Address </label>
 									{/*eslint-disable-next-line no-useless-escape*/}
 									<input type="text" required className={this.state.email && (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) ? valid : invalid} name="email" aria-describedby="emailHelp" placeholder="Email Address" onChange={
 										this.handlerChange} />
-										{/*eslint-disable-next-line no-useless-escape*/}
+									{/*eslint-disable-next-line no-useless-escape*/}
 									{(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) ?
-									
+
 										<small>Email Format Valid</small>
-								:
-								<>	<small>input Email with Valid Format</small>
-									 </> 
+										:
+										<>	<small style={{ color: "red" }}>input Email with Valid Format</small>
+										</>
 									}
 								</div>
 								<div className="form-group">
 									<label >Password</label>
 									<input type="password" required className={this.state.password ? "form-control" : invalid} name="password" aria-describedby="emailHelp" placeholder="Enter Password" onChange={this.handlerChange} />
 									{this.state.password.length <= 4 || this.state.password.length > 16 ?
-										<small style={{color:"red"}}>Password must More than 4 character and Max 16 Character</small> :
+										<small style={{ color: "red" }}>Password must More than 4 character and Max 16 Character</small> :
 										<small>nice</small>
 									}
 								</div>
@@ -256,29 +256,33 @@ class Register extends Component {
 
 								</div>
 								<div className="form-group col-md-8">
-								<button type="button"  data-toggle="modal" data-target="#myModal" className="btn btn-outline-success" onClick={this.register}>
-									Sign Up
+									<button type="button" data-toggle="modal" data-target="#myModal" className="btn btn-outline-success" onClick={this.register}>
+										Sign Up
 				</button>
-				</div>
+								</div>
 
 							</form>
-							{this.state.isEmptyEmail===true?
+							{/* {this.state.isEmptyEmail===true?
 		<ModalAlert text="Email Empty"/>:<></>
-		}			
-	<div style={{ margin: "0% 0 5% 38%" }}>
-							<span style={{ margin: "0% 0 0% 0%" }}>Already Have Account ?  </span>
-							<Link to="/auth/login">
-								<span className="" >Login Here</span>
-							</Link>
+		}			 */}
+							<div style={{ margin: "0 0 0 38%" }}>
+								<span>Already Have Account ?  </span>
+								<Link to="/auth/login">
+									<span className="" >Login Here</span>
+								</Link>
+							</div>
 						</div>
-					</div>
-						<Footer />
+						<div style={{ margin: "15% 0 0 0" }}>
+
+							<Footer />
+						</div>
+
 					</div>
 
 
 				</div>
 
-		
+
 
 
 			</>
@@ -287,21 +291,21 @@ class Register extends Component {
 }
 const mapStateToProps = ({
 
-    reducerUser,
+	reducerUser,
 
 
 }) => {
-    return {
-        isRejected: reducerUser.isRejected,
-      
-    };
+	return {
+		isRejected: reducerUser.isRejected,
+
+	};
 };
 const mapDispatchToProps = (dispatch) => {
-    return {
-        registerUserAction: (body) => {
-            dispatch(registerUserActionCreator(body));
-        },
-    };
+	return {
+		registerUserAction: (body) => {
+			dispatch(registerUserActionCreator(body));
+		},
+	};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Register);

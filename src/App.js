@@ -32,7 +32,6 @@ import store from "./redux/store";
 require('dotenv').config()
 
 const role=localStorage.getItem('role')
-console.log(role)
 
 const App = () => {
   

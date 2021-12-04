@@ -4,8 +4,10 @@ import { Card, ListGroup } from 'react-bootstrap'
 // import { deleteBook } from '../utils/http'
 import '../styles/Home.css'
 import '../styles/Card.css'
-function BookCardUser({ data, refresh }) {
-  const URL_BASE = process.env.REACT_APP_API
+function BookCardUser({ data }) {
+  // const URL_BASE = process.env.REACT_APP_API
+  const URL_BASE = 'http://localhost:5000'
+
   return (
     <>
 

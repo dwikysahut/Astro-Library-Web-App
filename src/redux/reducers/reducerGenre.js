@@ -108,7 +108,7 @@ const dataGenre = (prevState = initialValue, action) => {
         case putGenreAction + fulfilled:
             const newData = prevState.data.map(dataGenre => {
                        // eslint-disable-next-line eqeqeq
-                if (dataGenre.id ==action.payload.data.data.id) {
+                if (dataGenre.id === parseInt(action.payload.data.data.id)) {
                     return action.payload.data.data;
                 }
                 return dataGenre;
@@ -144,7 +144,7 @@ const dataGenre = (prevState = initialValue, action) => {
         case deleteGenreAction + fulfilled:
             const deleteData = prevState.data.filter(
                 // eslint-disable-next-line eqeqeq
-                dataGenre => dataGenre.id != action.payload.data.data.id
+                dataGenre => dataGenre.id !== parseInt(action.payload.data.data.id)
             )
             console.log(deleteData)
             return {

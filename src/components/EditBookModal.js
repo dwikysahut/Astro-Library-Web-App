@@ -123,7 +123,7 @@ class EditBookModal extends Component {
             console.log(this.props)
             if (this.props.isLoading === false && this.props.isFulfilled === true) {
                 this.handleHide()
-                return this.props.refresh()
+                // return this.props.refresh()
             }
             // await editBook(
             //     localStorage.getItem('token'),

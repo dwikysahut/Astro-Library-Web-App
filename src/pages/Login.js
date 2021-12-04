@@ -3,13 +3,14 @@ import { Button } from 'react-bootstrap'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 // import { loginUser, allGenre, registerUser } from '../utils/http'
-import '../styles/Home.css'
+import '../styles/Login.css'
 import { Link } from "react-router-dom";
 // import ModalAlert from '../components/ModalAlert'
 import {  Modal } from 'react-bootstrap'
 // import ModalMessage from '../components/ModalMessage'
 import { loginUserActionCreator } from "../redux/actions/UserAction.js";
 import { connect } from "react-redux";
+import animate from '../images/animate.jpg'
 class Login extends Component {
 	// constructor(){}
 	state = {
@@ -87,19 +88,19 @@ class Login extends Component {
 		let invalid = "form-control is-invalid"
 
 		return (
-			<>
-				<Navbar />
+			<div className="container-fluid no-padding">
+				{/* <Navbar /> */}
 
-				<div className="row">
+				<div className="row no-gutters">
 				
-						<div className="col-sm" style={{ width: "100%"}}>
-							<img src="/astro5.jpg" style={{ width: "100%", height: "130%",position: "static" }} alt="library.jpeg"/>
+						<div className="col-md-6 no-padding">
+						<img src={require('../images/animate.jpg')} style={{ width: "100%", height: "100%" }} alt="animate.jpg"/>
 							<h1 className="top-left" style={{ color: "white" }}>Astro Library<br></br>
 					Make Your History From Now</h1>
 							<br />
 						</div>
 		
-					<div className="col-sm">
+					<div className="col">
 						<div className="">
 							<h6 className="text-monospace" >Login</h6>
 							<form style={{marginLeft:"20%"}}>
@@ -153,13 +154,15 @@ class Login extends Component {
 
 							</form>
 						</div>
-						<div style={{ margin: "0% 0 10% 40%" }}>
-							<span style={{ margin: "0% 0 30% 0%" }}>Don't Have Account ?  </span>
+						<div style={{ margin: "0% 0 0px 40%" }}>
+							<span style={{ margin: "30% 0 0% 0%" }}>Don't Have Account ?  </span>
 							<Link to="/auth/register">
 								<span className="" >Click Here</span>
 							</Link>
 						</div>
-						<Footer />
+						<div style={{ margin: "40% 0 0 0" }}>
+							<Footer />
+						</div>
 					</div>
 				</div>
 				{this.props.isRejected === true ?
@@ -177,8 +180,8 @@ class Login extends Component {
 							</Modal.Body>
 							<Modal.Footer >
 							<Button variant="dark" onClick={this.handleHide}>
-              Okay
-            </Button>
+              	Okay
+           		 </Button>
 
 							</Modal.Footer>
 						</Modal>
@@ -186,7 +189,7 @@ class Login extends Component {
 					</>
 				}
 
-			</>
+			</div>
 		)
 	}
 }

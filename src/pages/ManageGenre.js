@@ -12,7 +12,7 @@ import { connect } from "react-redux";
 class ManageGenre extends Component {
   
     state={
-        id:'',
+    id:'',
     name:'',
     isSuccess:true,
     isShow: false,
